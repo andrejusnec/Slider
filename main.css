@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+    width: 100%;
+    margin: 40px auto 60px auto;
+}
+.wrap {
+    width: 500px;
+    height: 500px;
+    border: 2px solid;
+    position: relative;
+    margin: 0 auto;
+}
+.slide-single {
+    width: 480px;
+    height: 500px;
+    margin: 0 10px;
+    position: absolute;
+    transition: all 1s ease 0s;
+    left: 0;
+    top: 0;
+}
