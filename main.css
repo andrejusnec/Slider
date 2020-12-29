@@ -1,18 +1,25 @@
+body {
+    overflow: hidden;
+}
 h1 {
     text-align: center;
     width: 100%;
     margin: 40px auto 60px auto;
 }
+.test {
+   display: inline-block;
+   width: 500%;
+   overflow: hidden;
+}
 .wrap {
-    width: 500px;
-    height: 500px;
+    width: 960px;
+    height: 300px;
     border: 2px solid;
-    position: relative;
-    margin: 0 auto;
+    position: relative; 
 }
 .slide-single {
-    width: 480px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     margin: 0 10px;
     position: absolute;
     transition: all 1s ease 0s;

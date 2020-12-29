@@ -1,42 +1,45 @@
  let slides = document.querySelectorAll('.slide-single');
  let slider = [];
-
+ let wrapper = document.querySelector('#slide')
+console.log(wrapper)
  for(let i = 0; i < slides.length; i++) {
     slider[i] = slides[i].src;
     slides[i].remove();
  }
- console.log(slider);
 
  let step = 0;
- let offset = 0;
+ let onMove = true;
+ //let offset = 0;
 
- function draw() {
+ function draw(offset) {
      let img = document.createElement('img');
      img.src = slider[step];
-     console.log(img.src);
      img.classList.add('slide-single');
-     img.style.left = offset*500 +'px';
-     document.querySelector('#slide').appendChild(img);  
+     img.style.left = offset*300 +'px';
+     document.querySelector('#slide').appendChild(img);
      step++;
-     if(step + 1 === slider.length) {
+     if(step === slider.length) {
          step = 0;
      }
-     offset = 1;
- }
+ } 
+ 
  function left() {
-     document.onclick = null;
      let slides2 = document.querySelectorAll('.slide-single');
      let offset2 = 0;
-     for(let i = 0; i < slides2.length; i++) {
-         slides2[i].style.left = offset2*500 - 500 + 'px';
+     console.log()
+     slides2[0].style.left = -300 + 'px';
+     setTimeout(function() {
+     slides2[0].remove();
+     }, 2000);
+     
+     for(let i = 1; i < slides2.length; i++) {
+         slides2[i].style.left = offset2*300 + 'px'; 
          offset2++;
      }
      setTimeout(function(){
-        slides2[0].remove(); 
-        document.onclick = left;
-        draw();
-     }, 1000);
+        draw(3);
+     }, 2000);
  }
- draw();
- draw();
- document.onclick = left;
+ draw(0);draw(1);draw(2); draw(3);
+ 
+ setInterval(function(){ left() }, 6000);
