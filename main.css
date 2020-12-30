@@ -18,11 +18,12 @@ h1 {
     position: relative; 
 }
 .slide-single {
-    width: 300px;
+    width: 285px;
     height: 300px;
     margin: 0 10px;
     position: absolute;
     transition: all 1s ease 0s;
     left: 0;
     top: 0;
+    padding:0 20px;
 }
