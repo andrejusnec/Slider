@@ -1,6 +1,7 @@
  let slides = document.querySelectorAll('.slide-single');
  let slider = [];
  let wrapper = document.querySelector('#slide')
+ let flag = true;
 console.log(wrapper)
  for(let i = 0; i < slides.length; i++) {
     slider[i] = slides[i].src;
@@ -42,4 +43,12 @@ console.log(wrapper)
  }
  draw(0);draw(1);draw(2); draw(3);
  
- setInterval(function(){ left() }, 6000);
+  
+    setInterval(function(){ if(flag){left()} }, 6000);
+ 
+ wrapper.addEventListener('mouseover', function(){
+        flag = false;
+ })
+ wrapper.addEventListener('mouseout', function(){
+     flag = true;
+ })

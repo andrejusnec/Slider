@@ -7,23 +7,24 @@ h1 {
     margin: 40px auto 60px auto;
 }
 .test {
-   display: inline-block;
-   width: 500%;
-   overflow: hidden;
-}
-.wrap {
-    width: 960px;
+    width: 900px;
     height: 300px;
     border: 2px solid;
     position: relative; 
+    margin: 0 auto;
+    overflow: hidden;
+}
+.wrap {
+    display: inline-block;
+   width: 500%;
+   overflow: hidden;
 }
 .slide-single {
-    width: 285px;
+    width: 280px;
     height: 300px;
     margin: 0 10px;
     position: absolute;
     transition: all 1s ease 0s;
     left: 0;
     top: 0;
-    padding:0 20px;
 }
